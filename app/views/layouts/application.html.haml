@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{content: "width=device-width, initial-scale=1", name: "viewport"}
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Vent-rails
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    %nav= render 'layouts/nav'
+
+    - if notice
+      .notice= notice
+    - if alert
+      .alert= alert
+
+    %main{class: css_classes_for_main}= yield
