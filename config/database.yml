@@ -1,11 +1,12 @@
-development:
+development: &default
   adapter: postgresql
+  encoding: unicode
   database: vent-rails_development
   pool: 5
-  timeout: 5000
+  username: postgres
+  password:
+  host: db
 
 test:
-  adapter: postgresql
+  <<: *default
   database: vent-rails_test
-  pool: 5
-  timeout: 5000
