@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-  before_action :skip_authorization
 
   def index
     @comments = Comment.all.paginate page: params[:page]

@@ -1,6 +1,5 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
-  before_action :skip_authorization
 
   def index
     @messages = Message.all.paginate page: params[:page]
