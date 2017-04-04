@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  
+  resources :comments
+  resources :messages
   root to: 'home#show'
-
-  if Rails.env.development?
-    mount LetterOpenerWeb::Engine, at: "/letter_opener"
-  end
 
 end

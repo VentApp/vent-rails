@@ -1,8 +1,9 @@
 GIT
   remote: https://github.com/tenforwardconsulting/jefferies_tube
-  revision: 8866d454898312c458d27211287ee283d061c322
+  revision: f3fb0ab44dc374a440149e96dab40707f67a523f
   specs:
-    jefferies_tube (0.0.9)
+    jefferies_tube (0.1.0)
+      bundler-audit (~> 0.5.0)
       compass-rails
 
 GEM
@@ -374,4 +375,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.14.4
+   1.14.6
