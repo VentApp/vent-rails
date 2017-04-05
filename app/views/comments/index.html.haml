@@ -1,0 +1,24 @@
+%h1 Comments
+= link_to 'New Comment', new_comment_path
+
+%table.table
+  %thead
+    %tr
+      %th Title
+      %th Body
+      %th Message
+      %th
+      %th
+      %th
+
+  %tbody
+    - @comments.each do |comment|
+      %tr
+        %td= comment.title
+        %td= comment.body
+        %td= comment.message
+        %td= link_to 'Show', comment
+        %td= link_to 'Edit', edit_comment_path(comment)
+        %td= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }
+
+= will_paginate @comments
