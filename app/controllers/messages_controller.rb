@@ -1,8 +1,8 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:show, :edit, :update, :destroy]
+  before_action(:set_message, only: [:show, :edit, :update, :destroy])
 
   def index
-    @messages = Message.all.paginate page: params[:page]
+    @messages = Message.all.paginate(page: params[:page], per_page: 5)
   end
 
   def show
